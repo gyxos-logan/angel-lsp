@@ -173,6 +173,7 @@ export interface NodeFunc extends NodesBase {
     readonly accessor: AccessModifier | undefined;
     readonly head: FuncHeads;
     readonly identifier: TokenObject;
+    readonly typeTemplates: NodeType[] | undefined;
     readonly paramList: NodeParamList;
     readonly isConst: boolean;
     readonly funcAttr: FunctionAttribute | undefined;
@@ -535,6 +536,7 @@ export interface NodeFuncCall extends NodesBase {
     readonly nodeName: NodeName.FuncCall
     readonly scope: NodeScope | undefined,
     readonly identifier: TokenObject,
+    readonly typeTemplates: NodeType[] | undefined;
     readonly argList: NodeArgList
 }
 
